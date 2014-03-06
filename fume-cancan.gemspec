@@ -15,8 +15,8 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   
   gem.add_runtime_dependency "rails"
-  gem.add_runtime_dependency "cancan", ">= 1.6.8"
   
   # development
   gem.add_development_dependency "version"
+  gem.add_development_dependency "cancancan"
 end
