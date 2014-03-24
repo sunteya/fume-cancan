@@ -1,11 +1,9 @@
-
 require 'combustion'
 Combustion.initialize! :action_controller
 require "rspec/rails"
 require "rspec-do_action"
 
 require "pry-nav"
-
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
