@@ -1,3 +1,8 @@
+require "simplecov"
+require 'coveralls'
+Coveralls.wear!
+# SimpleCov.start
+
 require 'combustion'
 Combustion.initialize! :action_controller
 require "rspec/rails"

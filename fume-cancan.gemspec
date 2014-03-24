@@ -21,6 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "cancancan"
 
   gem.add_development_dependency "pry-nav"
+  gem.add_development_dependency "coveralls"
   gem.add_development_dependency "rspec-rails", "~> 2.14.1"
   gem.add_development_dependency "combustion", "~> 0.5.1"
   gem.add_development_dependency "rspec-do_action", "~> 0.0.3"
