@@ -1,8 +1,11 @@
 # -*- encoding: utf-8 -*-
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'fume-cancan/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "fume-cancan"
-  gem.version       = File.read(File.expand_path("../VERSION", __FILE__)).chomp
+  gem.version       = Fume::Cancan::VERSION
   gem.authors       = ["sunteya"]
   gem.email         = ["sunteya@gmail.com"]
   gem.description   = %q{fume helper methods for CanCan}
