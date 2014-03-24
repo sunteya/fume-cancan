@@ -19,4 +19,7 @@ Gem::Specification.new do |gem|
   # development
   gem.add_development_dependency "version"
   gem.add_development_dependency "cancancan"
+
+  gem.add_development_dependency "rspec-rails", "~> 2.14.1"
+  gem.add_development_dependency "combustion", "~> 0.5.1"
 end
