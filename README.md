@@ -1,5 +1,8 @@
 # Fume::Cancan
 
+[![Build Status](https://travis-ci.org/sunteya/fume-cancan.svg?branch=master)](https://travis-ci.org/sunteya/fume)
+[![Coverage Status](https://coveralls.io/repos/sunteya/fume-cancan/badge.png)](https://coveralls.io/r/sunteya/fume)
+
 helper methods for CanCan
 
 ## Installation
