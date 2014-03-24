@@ -3,29 +3,31 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'fume/cancan/version'
 
-Gem::Specification.new do |gem|
-  gem.name          = "fume-cancan"
-  gem.version       = Fume::Cancan::VERSION
-  gem.authors       = ["sunteya"]
-  gem.email         = ["sunteya@gmail.com"]
-  gem.description   = %q{fume helper methods for CanCan}
-  gem.summary       = %q{fume helper methods for CanCan}
-  gem.homepage      = ""
+Gem::Specification.new do |spec|
+  spec.name          = "fume-cancan"
+  spec.version       = Fume::Cancan::VERSION
+  spec.authors       = ["sunteya"]
+  spec.email         = ["sunteya@gmail.com"]
+  spec.summary       = %q{fume helper methods for CanCan}
+  spec.description   = %q{fume helper methods for CanCan}
+  spec.homepage      = "https://github.com/sunteya/fume-cancan"
+  spec.license       = "MIT"
 
-  gem.files         = `git ls-files`.split($/)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.require_paths = ["lib"]
-  
-  gem.add_runtime_dependency "rails"
-  
-  # development
-  gem.add_development_dependency "version"
-  gem.add_development_dependency "cancancan"
+  spec.files         = `git ls-files -z`.split("\x0")
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ["lib"]
 
-  gem.add_development_dependency "pry-nav"
-  gem.add_development_dependency "coveralls"
-  gem.add_development_dependency "rspec-rails", "~> 2.14.1"
-  gem.add_development_dependency "combustion", "~> 0.5.1"
-  gem.add_development_dependency "rspec-do_action", "~> 0.0.3"
+  spec.add_runtime_dependency "rails"
+
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "pry-nav"
+  spec.add_development_dependency "coveralls"
+
+  spec.add_development_dependency "cancancan"
+
+  spec.add_development_dependency "rspec-rails", "~> 2.14.1"
+  spec.add_development_dependency "combustion", "~> 0.5.1"
+  spec.add_development_dependency "rspec-do_action", "~> 0.0.3"
 end
