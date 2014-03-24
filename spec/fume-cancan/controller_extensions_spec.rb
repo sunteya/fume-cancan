@@ -23,16 +23,8 @@ describe Fume::Cancan::ControllerExtensions, type: :controller do
       end
     end
 
-    def ability
-      controller.current_ability
-    end
-
-    def is_expected_access_denied
-      expect { do_action }.to raise_error CanCan::AccessDenied
-    end
-
-    def is_expected_response_ok
-      do_action; expect(response.body).to eq "OK"
-    end
+    define_method :ability, -> { controller.current_ability }
+    define_method :is_expected_access_denied, -> { expect { do_action }.to raise_error CanCan::AccessDenied }
+    define_method :is_expected_response_ok, -> { do_action; expect(response.body).to eq "OK" }
   end
 end
