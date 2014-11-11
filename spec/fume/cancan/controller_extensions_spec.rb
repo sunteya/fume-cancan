@@ -1,6 +1,6 @@
-require "spec_helper"
+require "rails_helper"
 
-describe Fume::Cancan::ControllerExtensions, type: :controller do
+RSpec.describe Fume::Cancan::ControllerExtensions, type: :controller do
   describe "#authorize_object" do
     controller(ApplicationController) {}
     action { get :index }
