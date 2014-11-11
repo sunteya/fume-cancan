@@ -35,6 +35,11 @@ describe Fume::Cancan::ControllerExtensions, type: :controller do
         controller { authorize_object object: :admin }
         it { is_expected_response_ok }
       end
+
+      context "with action options" do
+        controller { authorize_object :admin, action: :read }
+        it { is_expected_access_denied }
+      end
     end
 
     define_method :ability, -> { controller.current_ability }
