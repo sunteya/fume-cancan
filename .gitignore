@@ -16,3 +16,4 @@
 /tags
 /spec/internal/log/
 /vendor/bundler/
+/.rubocop_todo.yml
