@@ -13,15 +13,22 @@ Add this line to your application's Gemfile:
 
 ## Usage
 
-Ability:
+### authorize_object
 
-	can :manage, :admin
+    # Ability:
+    can :manage, :admin
 
-Controller:
+    # Controller:
+    class Admin::BaseController < ApplicationController
+      authorize_object :admin
+    end
 
-	class Admin::BaseController < ApplicationController
-	  authorize_object :admin
-	end
+### with_scope
+
+    # Controller:
+    class Topics < ApplicationController
+      load_and_authorize_resource with_scope: -> (base) { base.where(online: true) }
+    end
 
 ## Contributing
 

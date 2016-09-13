@@ -18,3 +18,4 @@
 /.rubocop_todo.yml
 /Gemfile.lock
 /gemfiles/*.gemfile.lock
+/spec/internal/db/*.sqlite
