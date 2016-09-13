@@ -11,7 +11,7 @@ module Fume
           object = args.shift || options[:object]
 
           filter_options = options.slice(:only, :except)
-          before_filter(filter_options || {}) do |controller|
+          before_action(filter_options || {}) do |controller|
             controller.send :authorize_object!, object, options
           end
         end
