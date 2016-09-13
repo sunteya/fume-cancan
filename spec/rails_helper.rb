@@ -7,7 +7,7 @@ Coveralls.wear!
 
 require "pry-nav"
 require 'combustion'
-Combustion.initialize! :action_controller
+Combustion.initialize! :active_record, :action_controller
 require "rspec/rails"
 require "rspec-do_action"
 
