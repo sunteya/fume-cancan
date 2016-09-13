@@ -27,7 +27,8 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "cancancan"
 
-  spec.add_development_dependency "rspec-rails", "3.1.0"
-  spec.add_development_dependency "combustion", "0.5.2"
+  spec.add_development_dependency "rubocop"
+  spec.add_development_dependency "rspec-rails", "3.5.2"
+  spec.add_development_dependency "combustion", "0.5.5"
   spec.add_development_dependency "rspec-do_action", "0.0.4"
 end

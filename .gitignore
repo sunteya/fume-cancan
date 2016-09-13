@@ -3,7 +3,6 @@
 /.bundle
 /.config
 /.yardoc
-/Gemfile.lock
 /InstalledFiles
 /_yardoc
 /coverage
@@ -15,3 +14,7 @@
 /tmp
 /tags
 /spec/internal/log/
+/vendor/bundler/
+/.rubocop_todo.yml
+/Gemfile.lock
+/gemfiles/*.gemfile.lock
