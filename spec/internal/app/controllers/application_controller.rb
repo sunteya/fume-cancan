@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   def index
-    render text: "OK"
+    render plain: "OK"
   end
 
   def current_ability
